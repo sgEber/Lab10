@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Lab10.Models.Pedidos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaPedido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEntrega)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEnvio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Destinatario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DireccionDestinatario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CiudadDestinatario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RegionDestinatario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodPostalDestinatario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaisDestinatario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.clientes.NombreCompañia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.compañiasdeenvios.nombreCompañia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Empleados.Apellidos)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaPedido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaEntrega)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaEnvio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cargo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Destinatario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DireccionDestinatario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CiudadDestinatario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegionDestinatario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodPostalDestinatario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaisDestinatario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.clientes.NombreCompañia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.compañiasdeenvios.nombreCompañia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Empleados.Apellidos)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdPedido }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdPedido }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdPedido })
+        </td>
+    </tr>
+}
+
+</table>

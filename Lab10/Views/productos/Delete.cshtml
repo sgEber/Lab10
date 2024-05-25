@@ -1,0 +1,104 @@
+﻿@model Lab10.Models.productos
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidadPorUnidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidadPorUnidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioUnidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioUnidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unidadesEnExistencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unidadesEnExistencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unidadesEnPedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unidadesEnPedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nivelNuevoPedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nivelNuevoPedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.suspendido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.suspendido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoriaProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoriaProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categorias.nombrecategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categorias.nombrecategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.proveedores.nombreCompañia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.proveedores.nombreCompañia)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

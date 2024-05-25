@@ -1,0 +1,98 @@
+﻿@model Lab10.Models.productos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidadPorUnidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidadPorUnidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioUnidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioUnidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unidadesEnExistencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unidadesEnExistencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.unidadesEnPedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.unidadesEnPedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nivelNuevoPedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nivelNuevoPedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.suspendido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.suspendido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categoriaProducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoriaProducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.categorias.nombrecategoria)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categorias.nombrecategoria)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.proveedores.nombreCompañia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.proveedores.nombreCompañia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idproducto }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
